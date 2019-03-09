@@ -1,5 +1,5 @@
 # MNIST
-#<font color=red>使用MNIST数据集实现手写数字识别</font>
+#使用MNIST数据集实现手写数字识别
 ##一、MNIST数据集的介绍以及前期的准备工作
 
 MNIST数据集有很多种格式，常见的有.gz/.npz等等，这里我们选用*.npz*格式的MNIST数据集，.npz数据集中将数据以词典的形式存储。
