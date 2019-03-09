@@ -65,19 +65,19 @@ MNIST数据集有很多种格式，常见的有.gz/.npz等等，这里我们选�
 ``` 
 def plot_images_lables_prediction(images,lables,prediction,idx,num=10):
     fig = plt.gcf()
-    fig.set_size_inches(12,14)
-    if num>25: num=25
-    for i in range(0,num):
-        ax = plt.subplot(5,5,1+i)
-        ax.imshow(images[idx], cmap = 'binary')
-        title = "lable="+str(lables[idx])
-        if len(prediction)>0:
-            title+=",prediction="+str(prediction[idx])
-        ax.set_title(title,fontsize=10)
-        ax.set_xticks([]);ax.set_yticks([])
-        idx+=1
-    plt.show()
-plot_images_lables_prediction(x_test_image,y_test_lable,[],0,10)
+    fig.set_size_inches(12,14)#设置图片显示的大小
+    if num>25: num=25#设置显示图片的数目小于25 ，如果超过25就设置为25
+    for i in range(0,num):#for循环执行程序内的代码块，画出num个数字图形
+        ax = plt.subplot(5,5,1+i)#建立子图为5行5列
+        ax.imshow(images[idx], cmap = 'binary')#画出子图，黑白色显示
+        title = "lable="+str(lables[idx])#显示子图的label
+        if len(prediction)>0:#如果传入了预测结果
+            title+=",prediction="+str(prediction[idx])#就显示预测结果
+        ax.set_title(title,fontsize=10)#设置子图的标题
+        ax.set_xticks([]);ax.set_yticks([])#设置不显示刻度
+        idx+=1#读取下一项
+    plt.show()#画出子图
+plot_images_lables_prediction(x_test_image,y_test_lable,[],0,10)#为函数传入参数，分别画出测试集的图片和显示测试集的label，这里没有传入预测值，所以传入空列表，从第0张开始画出十张
 
 ```  
 完整代码如下图：  
