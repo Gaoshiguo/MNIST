@@ -1,6 +1,6 @@
 # MNIST
-#使用MNIST数据集实现手写数字识别
-##一、MNIST数据集的介绍以及前期的准备工作
+#使用MNIST数据集实现手写数字识别#
+##一、MNIST数据集的介绍以及前期的准备工作##
 
 MNIST数据集有很多种格式，常见的有.gz/.npz等等，这里我们选用.npz格式的MNIST数据集，.npz数据集中将数据以词典的形式存储。
 前期的准备工作需要我们导入TensorFlow、Keras、matplotlib等
