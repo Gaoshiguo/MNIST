@@ -39,7 +39,21 @@ print('x_test_image',x_test_image.shape)#输出测试集的属性
 
 接下来我们导入matplotlib包，这个包的主要功能是图片处理，可以将训练集和测试集中的图片直观的显示在我们眼前
 
-![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/4.png)
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/5.png)
+
+我们定义了一个plot_image（）函数，用于展示图片，括号中image作为参数
+
+fig=plt.gcf()
+
+fig.set_size_inches(2,2)
+
+设置图片的大小为2英寸x2英寸
+
+plt.imshow(image, cmap='binary')/调用plt.image函数显示图形，传入参数image，cmap参数设置为binary，代表以黑白显示
+
+传入的参数为x_train_image[0],显示训练集第一张图片，图片显示如下：
+
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/6.png)
 
 
 
