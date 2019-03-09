@@ -62,7 +62,8 @@ MNIST数据集有很多种格式，常见的有.gz/.npz等等，这里我们选�
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/6.png)  
 我们又定义了一个`<plot_images_lables_prediction()>`函数用来展示更多的图片，函数参入的参数有**images(数字图像)、label(真实值)、prediction(预测结果)、idx(展示的第一张图片序号)、num(想展示的图片数，默认是10，不可以超过25张) ** 
 该函数的代码片段为  
-``` def plot_images_lables_prediction(images,lables,prediction,idx,num=10):
+``` 
+def plot_images_lables_prediction(images,lables,prediction,idx,num=10):
     fig = plt.gcf()
     fig.set_size_inches(12,14)
     if num>25: num=25
@@ -76,8 +77,10 @@ MNIST数据集有很多种格式，常见的有.gz/.npz等等，这里我们选�
         ax.set_xticks([]);ax.set_yticks([])
         idx+=1
     plt.show()
-plot_images_lables_prediction(x_test_image,y_test_lable,[],0,10) ```  
- 完整代码如下图：  
+plot_images_lables_prediction(x_test_image,y_test_lable,[],0,10)
+
+```  
+完整代码如下图：  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/7.png)  
 运行结果如下图：  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/8.png)
