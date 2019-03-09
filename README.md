@@ -60,7 +60,7 @@ MNIST数据集有很多种格式，常见的有.gz/.npz等等，这里我们选�
 传入的参数为x_train_image[0],显示训练集第一张图片，图片显示如下：
 
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/6.png)  
-我们又定义了一个`<plot_images_lables_prediction()>`函数用来展示更多的图片，函数参入的参数有images(数字图像)、label(真实值)、prediction(预测结果)、idx(展示的第一张图片序号)、num(想展示的图片数，默认是10，不可以超过25张)  
+我们又定义了一个`<plot_images_lables_prediction()>`函数用来展示更多的图片，函数参入的参数有**images(数字图像)、label(真实值)、prediction(预测结果)、idx(展示的第一张图片序号)、num(想展示的图片数，默认是10，不可以超过25张) ** 
 该函数的代码片段为
 
 
