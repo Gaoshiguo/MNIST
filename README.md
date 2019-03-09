@@ -24,3 +24,23 @@ print('x_train_image',x_train_image.shape)#输出训练集的属性
 
 print('x_test_image',x_test_image.shape)#输出测试集的属性
 
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/1.png)
+
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/2.png)
+
+可以看到输出结果显示：训练集数据60000张、测试集数据10000张
+
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/3.png)
+
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/4.png)
+
+可以看到结果显示为（60000,28,28），代表的意思是六万张训练集图片，每张图片是28x28像素的，同样测试集（10000,28,28）代表的意思是10000张测试集图片
+每张28x28
+
+接下来我们导入matplotlib包，这个包的主要功能是图片处理，可以将训练集和测试集中的图片直观的显示在我们眼前
+
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/4.png)
+
+
+
+
