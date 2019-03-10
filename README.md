@@ -109,10 +109,10 @@ print(y_TestOnehot[:5])
 ```
 实际代码及运行结果图如下所示：  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/12.png)  
-* 该图显示了label中前五个个数据分别为5,0,4,1,9  
+该图显示了label中前五个个数据分别为5,0,4,1,9  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/13.png)  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/14.png)  
-* 该图反映了在经过转换以后的各个label变成了一维向量来存储信息
+该图反映了在经过转换以后的各个label变成了一维向量来存储信息
 
 
 
