@@ -94,7 +94,7 @@ x_Test =x_test_image.reshape(10000,784).astype('float32')
 print('x_train',x_Train)
 print('x_test',x_Test)>`  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/9.png)
-![image](https://https://github.com/Gaoshiguo/MNIST/blob/master/mnist/10.png)  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/10.png)  
 运行代码后可以发现：`<x_Test>`和`<x_Train>`分别存储了训练集和测试集数据的一维向量信息
 
 2.对label数据进行预处理  
