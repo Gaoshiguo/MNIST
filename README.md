@@ -60,8 +60,10 @@ MNIST数据集有很多种格式，常见的有.gz/.npz等等，这里我们选�
 传入的参数为x_train_image[0],显示训练集第一张图片，图片显示如下：
 
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/6.png)  
-我们又定义了一个`<plot_images_lables_prediction()>`函数用来展示更多的图片，函数参入的参数有**images(数字图像)、label(真实值)、prediction(预测结果)、idx(展示的第一张图片序号)、num(想展示的图片数，默认是10，不可以超过25张) ** 
-该函数的代码片段为  
+我们又定义了一个`<plot_images_lables_prediction()>`函数用来展示更多的图片，函数参入的参数有**images(数字图像)、label(真实值)、prediction(预测结果)、idx(展示的第一张图片序号)、num(想展示的图片数，默认是10，不可以超过25张) 
+** 
+该函数的代码片段为
+
 ``` 
 def plot_images_lables_prediction(images,lables,prediction,idx,num=10):
     fig = plt.gcf()
@@ -78,12 +80,42 @@ def plot_images_lables_prediction(images,lables,prediction,idx,num=10):
         idx+=1#读取下一项
     plt.show()#画出子图
 plot_images_lables_prediction(x_test_image,y_test_lable,[],0,10)#为函数传入参数，分别画出测试集的图片和显示测试集的label，这里没有传入预测值，所以传入空列表，从第0张开始画出十张
-
 ```  
+
 完整代码如下图：  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/7.png)  
 运行结果如下图：  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/8.png)
+
+# 三、数据预处理（提取特征值features）
+1.将原本28x28的图像数据调用reshape()方法，转换为以为的向量，由于是28x28，所以转换的一维向量长度是784，类型为浮点类型Float
+`<x_Train =x_train_image.reshape(60000,784).astype('float32')
+x_Test =x_test_image.reshape(10000,784).astype('float32')
+print('x_train',x_Train)
+print('x_test',x_Test)>`  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/9.png)
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/10.png)  
+运行代码后可以发现：`<x_Test>`和`<x_Train>`分别存储了训练集和测试集数据的一维向量信息
+
+2.对label数据进行预处理  
+label数据是一串0~9的数字，我们需要将其也转换为一个个的一维向量，例如0可以转换为
+[1,0,0,0,0,0,0,0,0,0],代表的意思是第0和数字为1，那么该向量表示的数字为0，1可以转换为[0,1,0,0,0,0,0,0,0,0,0]，代表的意思是第一个数字为1，该向量代表的数字为1，同理2可以表示为[0,0,1,0,0,0,0,0,0,0,0],我们可以调用`<np_utils.to_categorcally()>`方法来实现，具体代码为：  
+```
+y_TrainOnehot = np_utils.to_categorical(y_train_lable)
+y_TestOnehot = np_utils.to_categorical(y_test_lable)
+print(y_TrainOnehot[:5])
+print(y_TestOnehot[:5])
+
+```
+实际代码及运行结果图如下所示：  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/12.png)  
+* 该图显示了label中前五个个数据分别为5,0,4,1,9  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/13.png)  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/14.png)  
+* 该图反映了在经过转换以后的各个label变成了一维向量来存储信息
+
+
+
 
 
 
