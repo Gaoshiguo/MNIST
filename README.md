@@ -93,8 +93,8 @@ plot_images_lables_prediction(x_test_image,y_test_lable,[],0,10)#为函数传入
 x_Test =x_test_image.reshape(10000,784).astype('float32')
 print('x_train',x_Train)
 print('x_test',x_Test)>`  
-![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/9.png)
-![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/10.png)  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/9.png)
+![image](https://https://github.com/Gaoshiguo/MNIST/blob/master/mnist/10.png)  
 运行代码后可以发现：`<x_Test>`和`<x_Train>`分别存储了训练集和测试集数据的一维向量信息
 
 2.对label数据进行预处理  
@@ -108,10 +108,10 @@ print(y_TestOnehot[:5])
 
 ```
 实际代码及运行结果图如下所示：  
-![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/12.png)  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/12.png)  
 * 该图显示了label中前五个个数据分别为5,0,4,1,9  
-![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/13.png)  
-![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/14.png)  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/13.png)  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/14.png)  
 * 该图反映了在经过转换以后的各个label变成了一维向量来存储信息
 
 
