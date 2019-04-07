@@ -145,6 +145,8 @@ model.add(Dense(units=10,
  运行结果如下图：  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/9.png)
 
+我们分析代码运行结果，可以看到有两个层，分别是dense_1和dense_2两个层
+
 
 
 
