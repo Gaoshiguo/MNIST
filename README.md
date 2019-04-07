@@ -119,23 +119,26 @@ print(y_TestOnehot[:5])
 
 **结合本次实例，输入层就是将二维图像转化成的一维向量，是一组28x28=784的一维向量，隐藏层是256个神经元，输出层是10个输出神经元，因为输出层是0-9这10个数字，我们是将这十个数字转化成一个10个位点的一维向量，所以输出层是一个十个神经元的一维向量** 
 
-4.1建立线性模型 
+**4.1建立线性模型**   
+
 `<model = Sequential()>`该行代码可以建立一个线性堆叠模型，后续只需使用`model.add()`方法就可以添加各个层  
-4.2加入“输入层”和“隐藏层”    
+
+**4.2加入“输入层”和“隐藏层” **   
 ```
 model.add(Dense(units=256,
                 input_dim=784,
                 kernel_initializer='normal',
                 activation="relu"))
 ```
-这部分代码就是将*输入层*和*隐藏层*添加至模型中，其中各个参数的含义如下：**添加隐藏层模型，nuits代表隐藏层神经元有256个，input_dim代表输入层有784个参数，kernel_initializer代表使用正态分布随机初始化权值，activation定义激活函数为relu**  
-4.3加入"输出层"  
+这部分代码就是将*输入层*和*隐藏层*添加至模型中，其中各个参数的含义如下：**添加隐藏层模型，nuits代表隐藏层神经元有256个，input_dim代表输入层有784个参数，kernel_initializer代表使用正态分布随机初始化权值，activation定义激活函数为relu** 
+
+**4.3加入"输出层" ** 
 ```
 model.add(Dense(units=10,
            kernel_initializer="normal",
            activation="softmax"))
            ```
-           
+ 这部分代码是将“输出层”添加进model模型中，各参数的含义如下：**建立输出层模型，units代表输出层神经元10个，kernel_initializer代表使用正态分布随机初始化权值，activation代表定义激活函数为softmax**
 
 
 
