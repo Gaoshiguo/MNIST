@@ -122,7 +122,12 @@ print(y_TestOnehot[:5])
 4.1建立线性模型 
 `<model = Sequential()>`该行代码可以建立一个线性堆叠模型，后续只需使用`model.add()`方法就可以添加各个层  
 4.2加入“输入层”和“隐藏层”    
-
+```
+model.add(Dense(units=256,
+                input_dim=784,
+                kernel_initializer='normal',
+                activation="relu"))
+```
 
 
 
