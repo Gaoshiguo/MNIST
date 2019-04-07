@@ -128,6 +128,15 @@ model.add(Dense(units=256,
                 kernel_initializer='normal',
                 activation="relu"))
 ```
+这部分代码就是将*输入层*和*隐藏层*添加至模型中，其中各个参数的含义如下：**添加隐藏层模型，nuits代表隐藏层神经元有256个，input_dim代表输入层有784个参数，kernel_initializer代表使用正态分布随机初始化权值，activation定义激活函数为relu**  
+4.3加入"输出层"  
+```
+model.add(Dense(units=10,
+           kernel_initializer="normal",
+           activation="softmax"))
+           ```
+           
+
 
 
 
