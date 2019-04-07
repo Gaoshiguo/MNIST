@@ -113,7 +113,10 @@ print(y_TestOnehot[:5])
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/13.png)  
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist/14.png)  
 该图反映了在经过转换以后的各个label变成了一维向量来存储信息
-
+# 四、使用Keras多层感知器模型来进行训练
+*多层感知器模型的介绍*
+多层感知器模型包括输入层、隐藏层、输出层。
+**结合本次实例，输入层就是将二维图像转化成的一维向量，是一组28x28=784的一维向量，隐藏层是256个神经元，输出层是10个输出神经元，因为输出层是0-9这10个数字，我们是将这十个数字转化成一个10个位点的一维向量，所以输出层是一个十个神经元的一维向量**
 
 
 
