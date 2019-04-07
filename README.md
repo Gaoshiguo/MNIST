@@ -141,6 +141,9 @@ model.add(Dense(units=10,
  这部分代码是将“输出层”添加进model模型中，各参数的含义如下：**建立输出层模型，units代表输出层神经元10个，kernel_initializer代表使用正态分布随机初始化权值，activation代表定义激活函数为softmax**
  
  使用`print(model.summary())`来查看模型的摘要
+ 
+ 运行结果如下图：  
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/9.png)
 
 
 
