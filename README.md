@@ -147,6 +147,26 @@ model.add(Dense(units=10,
 
 我们分析代码运行结果，可以看到有两个层，分别是dense_1和dense_2两个层,输入层和隐藏层是一起建立的，所以没有显示输入层，在dense_1后有一个256，代表隐藏层有256个神经元，dense_1有10，代表输出层有10个神经元，后面还有param,代表参数个数，由于是线性堆叠模型，所以参数是线性关系，通过反向传播算法更新神经元连接的权重与偏差，输入层到隐藏层的公式为：*h1=relu(X x W1 +b1)*,隐藏层到输出层的公式为：*y=softmax(h1 x W2 +b2)*,由此可以得到每一层的param的计算方式就是（上一层神经元个数）x（本层神经元个数）+（本层神经元数量）.可以看到隐藏层的Param=200960，其计算方法是784(输入层神经元个数)x256（隐藏层神经元个数）+256（隐藏层神经元个数）。输出层Param=2570,2570=256（隐藏层神经元个数）x10(输出层神经元个数)+10(输出层神经元个数)
 
+**4.4进行训练**
+4.4.1定义训练方式：在训练模型之前必须使用compile方法对训练模型进行设置
+```
+model.compile(
+                loss="categorical_crossentropy",
+                optimizer='adam',
+                metrics=['accuracy'])
+ ```
+#各参数的含义如下：
+#loss:设置损失函数，使用categorical_crossentropy（交叉熵）训练效果比较好
+#optimizer：使用adam优化器，让训练更快收敛，提高准确率
+#metrics：设置评估模型的方式是准确率
+
+4.4.2开始训练
+```
+train_history =model.fit(x=x_Train_normalize,
+                         y=y_TrainOnehot,validation_split=0.2,
+                         epochs=10,batch_size=200,verbose=2)
+```
+
 
 
 
