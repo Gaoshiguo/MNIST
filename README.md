@@ -167,6 +167,12 @@ train_history =model.fit(x=x_Train_normalize,
                          epochs=10,batch_size=200,verbose=2)
 ```
 
+使用model.fit方法进行训练，将训练的结果存储在train_history变量中，各个参数的含义如下：
+`x=x_Train_normalize`feature数字图像的特征值
+`y=y_TrainOnehot`label数字图像的真实值`validation_split=0.2`设置训练与验证数据的比例，将80%用作训练数据，20%用作验证数据，`epochs=10`设置训练周期，一共10个训练周期，`batch_size=200`每个周期训练200项数据，`verbose=2`显示训练过程
+
+代码运行结果如下：
+
 
 
 
