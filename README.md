@@ -175,7 +175,7 @@ train_history =model.fit(x=x_Train_normalize,
 
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/10.png)
 
-
+我们从图中可以看到一共训练了48000个样本数据，验证了12000个样本，在十个周期中，每一个周期误差率越来越低，准确率越来越高，最终的第十个周期的准确率达到了99.24%，然后在使用验证数据验证准确率达到了97.69%
 
 
 
