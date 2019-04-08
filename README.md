@@ -173,7 +173,7 @@ train_history =model.fit(x=x_Train_normalize,
 
 代码运行结果如下：
 
-
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/10.png)
 
 
 
