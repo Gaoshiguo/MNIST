@@ -177,6 +177,24 @@ train_history =model.fit(x=x_Train_normalize,
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/11.png)
 我们从图中可以看到一共训练了48000个样本数据，验证了12000个样本，在十个周期中，每一个周期误差率越来越低，准确率越来越高，最终的第十个周期的准确率达到了99.24%，然后在使用验证数据验证准确率达到了97.69%
 
+4.4.3显示训练过程
 
+我们通过使用matplotlib图形化的来显示训练过程的准确率和验证过程的准确率，代码如下：
+```
+def show(train_history,train,validation):
+    plt.plot(train_history.history[train])
+    plt.plot(train_history.history[validation])
+    plt.title('train history')
+    plt.ylabel(train)
+    plt.xlabel('epoch')
+    plt.legend(['train','validation'],loc='upper left')
+    plt.show()
 
+show(train_history,'acc','val_acc')
+```
+函数中各个参数的说明如下：`plt.plot(train_history.history[train]) plt.plot(train_history.history[validation])`分别用来显示训练数据的结果和验证数据的结果，`plt.title('train history')`设置图的标题，`plt.ylabel(train)`显示y轴的标签，`plt.xlabel('epoch')`显示x轴的标签，` plt.legend(['train','validation'],loc='upper left')`设置'train','validation'的位置位于左上角
+
+最终画出的图像如下：
+
+![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/12.png)
 
