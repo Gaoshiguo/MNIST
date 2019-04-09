@@ -198,3 +198,10 @@ show(train_history,'acc','val_acc')
 
 ![image](https://github.com/Gaoshiguo/MNIST/blob/master/mnist-image/12.png)
 
+```
+#使用测试集数据来评估模型的准确性
+scores = model.evaluate(x_Test_normalize,y_TestOnehot)
+print()
+print('accuracy=',scores[1])
+```
+
